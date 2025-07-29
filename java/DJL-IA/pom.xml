@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.milo</groupId>
-	<artifactId>DJI-IA</artifactId>
+	<artifactId>DJL-IA</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DJI-IA</name>
-	<description>DJI - ia integration with Java</description>
+	<name>DJL-IA</name>
+	<description>DJL - ia integration with Java</description>
 	<url/>
 	<licenses>
 		<license/>
