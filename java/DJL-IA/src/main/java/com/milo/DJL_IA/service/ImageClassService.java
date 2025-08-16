@@ -29,8 +29,7 @@ public class ImageClassService {
         Criteria<Image, Classifications> criteria = Criteria.builder()
                 .setTypes(Image.class, Classifications.class)
                 .optApplication(Application.CV.IMAGE_CLASSIFICATION)
-                // .optFilter("backbone", "resnet") // opcional: forzar backbone
-                // .optFilter("layers", "50")       // opcional: forzar resnet50
+                .optArtifactId("resnet")
                 .build();
 
         model = ModelZoo.loadModel(criteria);
@@ -40,7 +39,6 @@ public class ImageClassService {
             Image dummy = ImageFactory.getInstance().fromImage(new java.awt.image.BufferedImage(224, 224, java.awt.image.BufferedImage.TYPE_INT_RGB));
             predictor.predict(dummy);
         } catch (TranslateException ignore) {
-            // warm-up best effort
         }
     }
 
